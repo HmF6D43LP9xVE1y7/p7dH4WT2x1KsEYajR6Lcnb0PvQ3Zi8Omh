@@ -35,11 +35,28 @@
         </title>
     </head>
     <body oncontextmenu="return false"><svg class="pageFader"></svg>
-        <div class="center">Home<br><br>imprint, privacy policy, legal notice, cookie settings</div>
-        <div class="fontS">Small</div>
-        <div class="fontM">Medium</div>
-        <div class="fontL">Large</div>
+        <div class="center">
+            <div class="fontM">Home</div>
+            <div class="fontS">imprint, privacy policy, legal notice, cookie settings</div>
+        </div>
+
+        <div class="fontS">Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.</div>
+        <div class="fontM">Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.</div>
+        <div class="fontL">Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.</div>
         <script src="js/preventDrag.min.js"></script>
         <script src="js/pageFader.min.js"></script>
+        <script>
+            document.querySelectorAll('.fontS, .fontM, .fontL').forEach(div => {
+            // Only wrap text if it's not already wrapped in a span as the first child
+            if (!div.firstElementChild || div.firstElementChild.tagName.toLowerCase() !== 'span') {
+                const span = document.createElement('span');
+                // Move all child nodes into the span (preserving any HTML structure inside)
+                while (div.firstChild) {
+                span.appendChild(div.firstChild);
+                }
+                div.appendChild(span);
+            }
+            });
+        </script>
     </body>
 </html>
