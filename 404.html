@@ -45,18 +45,5 @@
         <div class="fontL">Dies ist ein Typoblindtext. An ihm kann man sehen, ob alle Buchstaben da sind und wie sie aussehen.</div>
         <script src="./js/preventDrag.min.js"></script>
         <script src="./js/pageFader.min.js"></script>
-        <script>
-            document.querySelectorAll('.fontS, .fontM, .fontL').forEach(div => {
-            // Only wrap text if it's not already wrapped in a span as the first child
-            if (!div.firstElementChild || div.firstElementChild.tagName.toLowerCase() !== 'span') {
-                const span = document.createElement('span');
-                // Move all child nodes into the span (preserving any HTML structure inside)
-                while (div.firstChild) {
-                span.appendChild(div.firstChild);
-                }
-                div.appendChild(span);
-            }
-            });
-        </script>
     </body>
 </html>
