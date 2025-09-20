@@ -35,10 +35,6 @@
         </title>
     </head>
     <body oncontextmenu="return false"><svg class="pageFader"></svg>
-        <div class="center">
-            <div class="fontM">Home</div>
-            <div class="fontS">imprint, privacy policy, legal notice, cookie settings</div>
-        </div>
         <div style="margin: 1rem 15% 1rem 15%">
             <div class="fontL">
                 <p>
@@ -49,6 +45,8 @@
                 <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
                 </p>
+                <img src="https://placehold.co/350x250/lightgray/black" alt="">
+                <img src="https://placehold.co/350x250/lightgray/black" alt="">
                 <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
                 </p>
@@ -93,9 +91,24 @@
                 <p>
                     Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum.
                 </p>
+            </div>
+            <div class="fontS">
+                    <a href="imprint/">imprint</a>
+                    <a href="privacy_policy/">privacy_policy</a>
+                    <a href="legal_notice/">legal_notice</a>
+                    <a href="cookie_settings/">cookie_settings</a>
             </div>
         </div>
         <script src="js/preventDrag.min.js"></script>
         <script src="js/pageFader.min.js"></script>
+        <script>
+            document.querySelectorAll('br').forEach(function(br) {
+            var marker = document.createElement('span');
+            marker.textContent = '<br>';
+            marker.style.color = 'white';
+            marker.style.fontSize = '12px';
+            br.parentNode.insertBefore(marker, br);
+            });
+        </script>
     </body>
 </html>
