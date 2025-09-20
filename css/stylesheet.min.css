@@ -152,16 +152,23 @@ svg:hover {
 }
 
 
+
+.navL, .navR {
+    position: fixed;
+    top: calc(var(--fontSize) * 2);
+}
+.navL {
+    left: calc(var(--fontSize) * 2);
+}
+.navR {
+    right: calc(var(--fontSize) * 2);
+}
+
+
 /* phone */
 @media only screen and (max-width:767.9px) {
     :root {
         --fontSize: 10pt;
-    }
-    img {
-        margin: var(--fontSize) var(--fontSize) 0 0;
-    }
-    img:last-of-type {
-        margin: var(--fontSize) var(--fontSize) var(--fontSize) 0 !important;
     }
 }
 /* tablet */
@@ -169,35 +176,17 @@ svg:hover {
     :root {
         --fontSize: 10pt;
     }
-    img {
-        margin: var(--fontSize) var(--fontSize) var(--fontSize) 0;
-    }
-    img:last-of-type {
-        margin: var(--fontSize) var(--fontSize) var(--fontSize) 0 !important;
-    }
 }
 /* desktop */
 @media only screen and (min-width:1160px) {
     :root {
         --fontSize: 12pt;
     }
-    img {
-        margin: var(--fontSize) var(--fontSize) var(--fontSize) 0;
-    }
-    img:last-of-type {
-        margin: var(--fontSize) var(--fontSize) var(--fontSize) 0 !important;
-    }
 }
 /* ultrawide */
 @media only screen and (min-width:1440px) and (min-aspect-ratio:21/9) {
     :root {
         --fontSize: 10pt;
-    }
-    img {
-        margin: var(--fontSize) var(--fontSize) var(--fontSize) 0;
-    }
-    img:last-of-type {
-        margin: var(--fontSize) var(--fontSize) var(--fontSize) 0 !important;
     }
 }
 
@@ -221,9 +210,36 @@ a {
     transform: translate(-50%, -50%);
 }
 
+
+
+body::before,
+body::after {
+  content: "";
+  position: fixed;
+  background: red;
+  z-index: 99999;
+  pointer-events: none;
+}
+
+body::before {
+  top: 0;
+  bottom: 0;
+  width: .5px;
+  left: calc(var(--fontSize) * 2);
+  box-shadow: calc(100vw - (4 * var(--fontSize))) 0 0 red;
+}
+
+body::after {
+  left: 0;
+  right: 0;
+  height: .5px;
+  top: calc(var(--fontSize) * 2);
+  box-shadow: 0 calc(100vh - (4 * var(--fontSize))) 0 red;
+}
+
                                                                                 /*
 * {
     background-color: rgba(255, 0, 0, .2) !important;
-    outline: .1px dashed white !important;
 }
-*/
+
+
