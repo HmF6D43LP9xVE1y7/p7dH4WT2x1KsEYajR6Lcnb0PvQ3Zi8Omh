@@ -141,6 +141,15 @@ svg:hover {
     line-height: calc(var(--fontSize) * 2 + var(--fontSize) * .1);
     margin-bottom: calc(var(--fontSize) * 2 + var(--fontSize) * .1);
 }
+.fontS p {
+    transform: translateY(-2.2px);
+}
+.fontM p {
+    transform: translateY(-3.2px);
+}
+.fontL p {
+    transform: translateY(-3.9px);
+}
 .fontS p:not(:nth-child(1)) {
     text-indent: calc(var(--fontSize) * 2 + var(--fontSize) * .1);
 }
@@ -209,37 +218,22 @@ a {
     left: 50%;
     transform: translate(-50%, -50%);
 }
-
-
-
-body::before,
-body::after {
-  content: "";
-  position: fixed;
-  background: red;
-  z-index: 99999;
-  pointer-events: none;
+.content {
+    margin: calc(var(--fontSize) * 2) 25vw calc(var(--fontSize) * 2) 25vw;
 }
 
-body::before {
-  top: 0;
-  bottom: 0;
-  width: .5px;
-  left: calc(var(--fontSize) * 2);
-  box-shadow: calc(100vw - (4 * var(--fontSize))) 0 0 red;
+
+.spacer {
+    position: fixed;
+    top: calc(var(--fontSize) * 2);
+    left: calc(var(--fontSize) * 2);
+    right: calc(var(--fontSize) * 2);
+    bottom: calc(var(--fontSize) * 2);
+    width: auto;
+    height: auto;
 }
 
-body::after {
-  left: 0;
-  right: 0;
-  height: .5px;
-  top: calc(var(--fontSize) * 2);
-  box-shadow: 0 calc(100vh - (4 * var(--fontSize))) 0 red;
-}
-
-                                                                                /*
+                                                                                /**/
 * {
     background-color: rgba(255, 0, 0, .2) !important;
 }
-
-
