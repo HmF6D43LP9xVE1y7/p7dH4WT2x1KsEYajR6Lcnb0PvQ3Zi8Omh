@@ -221,7 +221,7 @@ a {
 .content {
     margin: calc(var(--fontSize) * 2) 25vw calc(var(--fontSize) * 2) 25vw;
 }
-
+/*
 
 .spacer {
     position: fixed;
@@ -233,7 +233,7 @@ a {
     height: auto;
 }
 
-                                                                                /**/
+                                                                                /*
 * {
     background-color: rgba(255, 0, 0, .2) !important;
 }
