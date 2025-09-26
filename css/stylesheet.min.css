@@ -222,7 +222,7 @@ a {
     margin: calc(var(--fontSize) * 2) 25vw calc(var(--fontSize) * 2) 25vw;
 }
 
-
+/*
 .edge_spacer {
     position: fixed;
     top: calc(var(--fontSize) * 2);
@@ -231,9 +231,10 @@ a {
     bottom: calc(var(--fontSize) * 2);
     width: auto;
     height: auto;
+    z-index: 5;
 }
 
-                                                                                /**/
+                                                                                /*
 * {
     background-color: rgba(255, 0, 0, .2) !important;
 }
