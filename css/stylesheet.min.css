@@ -5,7 +5,7 @@
     font-display: auto;
     font-stretch: normal;
     font-weight: 100;
-    font-style: normal
+    font-style: normal;
 }
 
 @font-face {
@@ -15,7 +15,7 @@
     font-display: auto;
     font-stretch: normal;
     font-weight: 200;
-    font-style: normal
+    font-style: normal;
 }
 
 @font-face {
@@ -25,11 +25,11 @@
     font-display: auto;
     font-stretch: normal;
     font-weight: 400;
-    font-style: normal
+    font-style: normal;
 }
 
 ::-webkit-scrollbar {
-    display: none
+    display: none;
 }
 
 * {
@@ -63,41 +63,30 @@
     -webkit-hyphens: none;
     -ms-hyphens: none;
     hyphens: none;
-    color: rgb(0 0 0)
+    color: rgb(0 0 0);
 }
 
 body {
-    background-color: rgb(255 255 255)
+    background-color: rgb(255 255 255);
 }
 
 .underline {
-    font-style: italic;
     -webkit-text-decoration: underline;
     -moz-text-decoration: underline;
     -ms-text-decoration: underline;
     -o-text-decoration: underline;
-    text-decoration: underline
-}
-
-.translucent {
-    opacity: .25
-}
-
-svg {
-    position: absolute;
-    stroke: #000;
-    stroke-width: calc((var(--viewWidth) / var(--gridWidth)) * .01)
+    text-decoration: underline;
 }
 
 a,
 svg {
-    pointer-events: all
+    pointer-events: all;
 }
 
 a:hover,
 svg:hover {
     opacity: .3;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .pageFader {
@@ -106,73 +95,79 @@ svg:hover {
     height: 100vh;
     width: 100vw;
     pointer-events: none;
-    z-index: 99
+    z-index: 99;
 }
 
 .pageFader.fade-out {
-    opacity: 0
+    opacity: 0;
 }
 
 .pageFader.fade-in {
-    opacity: 1
+    opacity: 1;
 }
-/*
-@media only screen and (max-width:767.9px) {
-    * {
-        hyphenate-character: '-';
-        -webkit-hyphens: auto;
-        -ms-hyphens: auto;
-        hyphens: auto
-    }
-}
-*/
+
 .fontS {
     font-size: var(--fontSize);
     line-height: calc(var(--fontSize) + var(--fontSize) * .1);
     margin-bottom: calc(var(--fontSize) + var(--fontSize) * .1);
 }
+
 .fontM {
     font-size: calc(var(--fontSize) * 1.5);
     line-height: calc(var(--fontSize) * 1.5 + var(--fontSize) * .1);
     margin-bottom: calc(var(--fontSize) * 1.5 + var(--fontSize) * .1);
 }
+
 .fontL {
     font-size: calc(var(--fontSize) * 2);
     line-height: calc(var(--fontSize) * 2 + var(--fontSize) * .1);
     margin-bottom: calc(var(--fontSize) * 2 + var(--fontSize) * .1);
 }
+/*
+use fontSize var to specify spacing to top end of div for each device
+
 .fontS p {
     transform: translateY(-2.2px);
 }
+
 .fontM p {
     transform: translateY(-3.2px);
 }
+
 .fontL p {
     transform: translateY(-3.9px);
 }
+*/
+.fontM p::after {
+    content: "";
+    height: 100%;
+    display: inline-block;
+}
+
 .fontS p:not(:nth-child(1)) {
     text-indent: calc(var(--fontSize) * 2 + var(--fontSize) * .1);
 }
+
 .fontM p:not(:nth-child(1)) {
     text-indent: calc(var(--fontSize) * 3 + var(--fontSize) * .1);
 }
+
 .fontL p:not(:nth-child(1)) {
     text-indent: calc(var(--fontSize) * 6 + var(--fontSize) * .1);
 }
-
-
 
 .navL, .navR {
     position: fixed;
     top: calc(var(--fontSize) * 2);
 }
+
 .navL {
     left: calc(var(--fontSize) * 2);
 }
+
 .navR {
     right: calc(var(--fontSize) * 2);
 }
-
 
 /* phone */
 @media only screen and (max-width:767.9px) {
@@ -180,18 +175,21 @@ svg:hover {
         --fontSize: 10pt;
     }
 }
+
 /* tablet */
 @media only screen and (min-width:768px) and (max-width:1159.9px) {
     :root {
         --fontSize: 10pt;
     }
 }
+
 /* desktop */
 @media only screen and (min-width:1160px) {
     :root {
         --fontSize: 12pt;
     }
 }
+
 /* ultrawide */
 @media only screen and (min-width:1440px) and (min-aspect-ratio:21/9) {
     :root {
@@ -199,39 +197,11 @@ svg:hover {
     }
 }
 
-
-
-
-a {
-    font-style: italic;
-    -webkit-text-decoration: underline;
-    -moz-text-decoration: underline;
-    -ms-text-decoration: underline;
-    -o-text-decoration: underline;
-    text-decoration: underline
-}
-
-
 .center {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-}
-.content {
-    margin: calc(var(--fontSize) * 2) 25vw calc(var(--fontSize) * 2) 25vw;
-}
-
-/*
-.edge_spacer {
-    position: fixed;
-    top: calc(var(--fontSize) * 2);
-    left: calc(var(--fontSize) * 2);
-    right: calc(var(--fontSize) * 2);
-    bottom: calc(var(--fontSize) * 2);
-    width: auto;
-    height: auto;
-    z-index: 5;
 }
 
                                                                                 /*
